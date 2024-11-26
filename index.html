@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>System Compatibility Checker</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>ABC Technologies</h1>
+      <h1>System Compatibility Checker</h1>
+
+      <div class="section">
+        <div class="item">
+          <h2>RAM</h2>
+          <img src="Images//ram.jpg" alt="RAM Image" />
+          <select id="ramDropdown">
+            <option value="4">4GB</option>
+            <option value="8">8GB</option>
+            <option value="16">16GB</option>
+          </select>
+        </div>
+
+        <div class="item">
+          <h2>CPU</h2>
+          <img src="Images//cpu.jpg" alt="CPU Image" />
+          <select id="cpuDropdown">
+            <option value="2">2 Cores</option>
+            <option value="4">4 Cores</option>
+            <option value="8">8 Cores</option>
+            <option value="12">12 Cores</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="submitButton" onclick="EvaluateSysInfo()">Submit</button>
+
+      <div id="result"></div>
+      <button id="resetButton">Reset</button>
+    </div>
+
+    <div class="section">
+      <div class="item">
+        <h2>Software Requirements</h2>
+
+        <label for="minRam"> <h2>Minimum RAM (GB):</h2></label>
+        <input type="number" id="minRam" value="8" min="1" />
+        <br />
+        <label for="minCpu"> <h2>Minimum CPU Cores:</h2> </label>
+        <input type="number" id="minCpu" value="4" min="1" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="details.js"></script>
+  </body>
+</html>
